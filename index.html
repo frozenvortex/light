@@ -57,9 +57,9 @@ function myFunction() {
      ref.on("value", function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
     var childData = childSnapshot.val();
-    console.log(childData);
   });
 });
+console.log(childData);
 </script>
 
 </body>
