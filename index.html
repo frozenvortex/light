@@ -57,11 +57,16 @@ function myFunction() {
 <script>
      var ref = firebase.database().ref();
 
-ref.on("value", function(snapshot) {
+/*ref.on("value", function(snapshot) {
    console.log(snapshot.val());
 }, function (error) {
    console.log("Error: " + error.code);
-});
+});*/
+     ref.once("value")
+  .then(function(snapshot) {
+    var firstName = snapshot.child("light").val();
+          console.log(firstName);
+  });
      </script>
 </body>
 </html>
