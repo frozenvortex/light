@@ -53,14 +53,15 @@ function myFunction() {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-     var ref=firebase.database().ref("lights-on-lights-off");
-     ref.on("value", function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-    var childData = childSnapshot.val();
-  });
-});
-console.log(ref);
 </script>
+<script>
+     var ref = firebase.database().ref();
 
+ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+     </script>
 </body>
 </html>
