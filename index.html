@@ -46,11 +46,11 @@ function myFunction() {
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
-    var number = snapshot.child("light").val();
+    number = snapshot.child("light").val();
           console.log(number);
   });
      if (number=="1") {
-          $(head).append(`<style>
+          $("head").append(`<style>
 body {
   background-color: white;
   color: black;
@@ -64,7 +64,7 @@ body {
 </style>`);
      }
      else {
-          $(head).append(`<style>
+          $("head").append(`<style>
 body {
   background-color: black;
   color: white;
