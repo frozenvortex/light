@@ -46,9 +46,8 @@ function myFunction() {
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
-    globalThis.number = snapshot.child("light").val();
-  });
-     console.log(number);
+    var number = snapshot.child("light").val();
+    console.log(number);
      if (number=="1") {
           $("head").append(`<style>
 body {
@@ -77,6 +76,7 @@ body {
 }
 </style>`);
      }
+  });   
      </script>
 </body>
 </html>
