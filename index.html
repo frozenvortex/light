@@ -46,7 +46,7 @@ function myFunction() {
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
-    window.number = snapshot.child("light").val();
+    globalThis.number = snapshot.child("light").val();
   });
      console.log(number);
      if (number=="1") {
