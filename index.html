@@ -5,17 +5,10 @@
      </head>
 <body>
 <h2>Light Switch</h2>
-<p>Click on the button to toggle the lightswitch:</p>
+<p>Click on the button to toggle the light switch:</p>
 
 <button onclick="myFunction()">Switch</button>
-     
-     <script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
-     
+         
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
@@ -43,6 +36,7 @@ function myFunction() {
   firebase.analytics();
 </script>
 <script>
+     function myFunction() {
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
@@ -83,6 +77,9 @@ body {
 });
      }
   });   
+          var element = document.body;
+   element.classList.toggle("dark-mode");   
+     }
      </script>
 </body>
 </html>
