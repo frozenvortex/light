@@ -43,13 +43,12 @@ function myFunction() {
   firebase.analytics();
 </script>
 <script>
-     var number;
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
-    number = snapshot.child("light").val();
-          console.log(number);
+    window.number = snapshot.child("light").val();
   });
+     console.log(number);
      if (number=="1") {
           $("head").append(`<style>
 body {
