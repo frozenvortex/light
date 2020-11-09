@@ -7,7 +7,7 @@
 <h2>Light Switch</h2>
 <p>Click on the button to toggle the light switch:</p>
 
-<button onclick="myFunction()">Switch</button>
+<button id="switch">Switch</button>
          
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
@@ -54,13 +54,13 @@ body {
   color: white;
 }
 </style>`);
-          function myFunction() {
+          $("#switch").on("click", function() {
           var element = document.body;
    element.classList.toggle("dark-mode");
                         ref.update ({
    "light": 0
 });
-     }
+     });
      }
      else {
           $("head").append(`<style>
@@ -75,13 +75,13 @@ body {
   color: black;
 }
 </style>`);
-                             function myFunction() {
+           $("#switch").on("click", function() {
           var element = document.body;
    element.classList.toggle("dark-mode");
                         ref.update ({
    "light": 1
 });
-     }
+     });
      }
      });</script>
 </body>
