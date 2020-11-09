@@ -43,10 +43,11 @@ function myFunction() {
   firebase.analytics();
 </script>
 <script>
+     var number;
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
-    window.number = snapshot.child("light").val();
+    number = snapshot.child("light").val();
           console.log(number);
   });
      if (number=="1") {
