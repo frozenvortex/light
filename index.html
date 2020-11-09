@@ -54,9 +54,13 @@ body {
   color: white;
 }
 </style>`);
-         ref.update ({
+          function myFunction() {
+          var element = document.body;
+   element.classList.toggle("dark-mode");
+                        ref.update ({
    "light": 0
 });
+     }
      }
      else {
           $("head").append(`<style>
@@ -71,16 +75,14 @@ body {
   color: black;
 }
 </style>`);
-                   ref.update ({
+                             function myFunction() {
+          var element = document.body;
+   element.classList.toggle("dark-mode");
+                        ref.update ({
    "light": 1
 });
      }
-     });</script>
-     <script>
-          function myFunction() {
-          var element = document.body;
-   element.classList.toggle("dark-mode");   
      }
-     </script>
+     });</script>
 </body>
 </html>
