@@ -36,7 +36,6 @@
   firebase.analytics();
 </script>
 <script>
-     function myFunction() {
      var ref = firebase.database().ref();
      ref.once("value")
   .then(function(snapshot) {
@@ -76,7 +75,9 @@ body {
    "light": 1
 });
      }
-  });   
+     });</script>
+     <script>
+          function myFunction() {
           var element = document.body;
    element.classList.toggle("dark-mode");   
      }
